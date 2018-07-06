@@ -5,7 +5,7 @@ using UnityEngine;
 public class Abilities : MonoBehaviour
 {
     private Rigidbody2D rigid;
-    private bool isClimbing, JumpAvailable, ClimbAvailable;
+    private bool JumpAvailable;
 
     public float jumpForce, throwForce;
     public int BlockLimit;
@@ -14,9 +14,7 @@ public class Abilities : MonoBehaviour
     private void Start()
     {
         rigid = GetComponent<Rigidbody2D>();
-        isClimbing = false;
         JumpAvailable = false;
-        ClimbAvailable = true;
     }
 
     private void Update()
@@ -31,12 +29,6 @@ public class Abilities : MonoBehaviour
         {
             if (JumpAvailable)
             {
-                if (isClimbing)
-                {
-                    isClimbing = false;
-                    rigid.bodyType = RigidbodyType2D.Dynamic;
-                    StartCoroutine("ClimbCooltime");
-                }
                 rigid.AddForce(Vector2.up * jumpForce);
                 JumpAvailable = false;
             }
@@ -62,21 +54,5 @@ public class Abilities : MonoBehaviour
         if (collision.collider.CompareTag("floor"))
             JumpAvailable = true;
 
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.collider.CompareTag("wall") && ClimbAvailable)
-        {
-            isClimbing = true;
-            JumpAvailable = true;
-            rigid.bodyType = RigidbodyType2D.Static;
-        }
-    }
-
-    IEnumerator ClimbCooltime()
-    {
-        ClimbAvailable = false;
-        yield return new WaitForSeconds(0.35f);
-        ClimbAvailable = true;
     }
 }
