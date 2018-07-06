@@ -19,24 +19,40 @@ public class Block : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == 1 || collision.gameObject.layer == 0)
-            return;
+        if (collision.gameObject.CompareTag("wall"))
 
-        if (collision.CompareTag("wall") || collision.CompareTag("floor"))
-        {
-            return;
+            for (int i = 0; i < GetComponentsInChildren<Collider2D>().Length; i++)
+            {
+                transform.GetComponentsInChildren<Collider2D>()[i].isTrigger = true;
+            }
+        return;
 
-
+        //if (collision.CompareTag("wall") || collision.CompareTag("floor"))
         //{
-        //    rigid.bodyType = RigidbodyType2D.Static;
-        //    //GetComponent<Collider2D>().isTrigger = false;
-        //    Destroy(GetComponent<Collider2D>());
-        //    Destroy(rigid);
+        //    return;
 
-        //    for (int i = 0; i < GetComponentsInChildren<Collider2D>().Length; i++)
+
         //    {
-        //        transform.GetComponentsInChildren<Collider2D>()[i].isTrigger = false;
+        //        rigid.bodyType = RigidbodyType2D.Static;
+        //        //GetComponent<Collider2D>().isTrigger = false;
+        //        Destroy(GetComponent<Collider2D>());
+        //        Destroy(rigid);
+
+        //        for (int i = 0; i < GetComponentsInChildren<Collider2D>().Length; i++)
+        //        {
+        //            transform.GetComponentsInChildren<Collider2D>()[i].isTrigger = false;
+        //        }
         //    }
-        }
+        //}
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("wall"))
+
+            for (int i = 0; i < GetComponentsInChildren<Collider2D>().Length; i++)
+            {
+                transform.GetComponentsInChildren<Collider2D>()[i].isTrigger = false;
+            }
+        return;
     }
 }

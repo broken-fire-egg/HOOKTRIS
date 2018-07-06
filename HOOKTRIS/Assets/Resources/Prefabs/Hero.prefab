@@ -27,9 +27,9 @@ GameObject:
   - component: {fileID: 50389324940739688}
   - component: {fileID: 61401511228872752}
   - component: {fileID: 114579414197056738}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Hero
-  m_TagString: Untagged
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1105871916266744}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.503, y: -0.111, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,14 +177,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 782f878220f2fd340b16c91e4767dc46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VJ: {fileID: 0}
   speed: 15
   power: 15
   grabpower: 30
   SM: {fileID: 114412329680527950}
   gravity: 7
+  shaking: 0
+  trajs: {fileID: 0}
+  BAS: {fileID: 0}
+  V2: {x: 0, y: 0}
   hookprefab: {fileID: 114980697323979880, guid: 509a6dc7937f9b444a524db55f565a40,
     type: 2}
-  trajhook: {fileID: 0}
+  trajhook: {fileID: 114075661674534192, guid: f5dd92bf68a20f841aba3163beac42cc, type: 2}
 --- !u!114 &114639401747367278
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -213,5 +218,5 @@ MonoBehaviour:
   logErrors: 0
   disableRenderingOnOverride: 1
   _animationName: idle_0
-  loop: 0
+  loop: 1
   timeScale: 1

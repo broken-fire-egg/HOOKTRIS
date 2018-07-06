@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OraControl : MonoBehaviour {
     public BlockAirSupport BAS;
-    bool blockfalling = false;
+    public bool blockfalling = false;
 
     private void FixedUpdate()
     {
