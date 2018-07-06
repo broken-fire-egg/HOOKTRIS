@@ -39,7 +39,10 @@ public class TempP : MonoBehaviour
             rigid.velocity = new Vector2(rigid.velocity.x, vel.y);
 
     }
-
+    public void Wallwilling()
+    {
+        SM.ChangeAnimation("jump_0", 0, false);
+    }
     private void Movement()
     {
         Vector2 move = new Vector2((Input.GetAxis("Horizontal") * speed), rigid.velocity.y);
@@ -80,6 +83,7 @@ public class TempP : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
         {
+            SM.ChangeAnimation("idle_0", 0, true);
             Destroy(hook.gameObject);
             hook = null;
           //  rigid.gravityScale = gravity;

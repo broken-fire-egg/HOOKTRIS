@@ -6,7 +6,6 @@ public class Hook : MonoBehaviour {
 
     private Rigidbody2D rigid;
     private LineRenderer line;
-
     [SerializeField]
     private Sprite linesprite;
 
@@ -62,7 +61,7 @@ public class Hook : MonoBehaviour {
         else if(Vector2.Distance(transform.position, player.transform.position) < 0.5f)
         {
             Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower/3;
-
+            player.Wallwilling();
             player.Rigid.velocity += direc;
         }
 
