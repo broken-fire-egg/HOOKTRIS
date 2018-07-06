@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4680936829947972}
   - component: {fileID: 61244185129331150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4716157710776524}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -54,9 +54,9 @@ GameObject:
   - component: {fileID: 50183028333547310}
   - component: {fileID: 114407827864634656}
   - component: {fileID: 60929230557781812}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block_5
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,7 +70,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4869595767868538}
   - component: {fileID: 61919055437590606}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4302536096470910}
   - component: {fileID: 61118423928797070}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4776318307147268}
   - component: {fileID: 61787359053650338}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4038614643532706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 1439171958204598}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4038614643532706}
   - {fileID: 4716157710776524}

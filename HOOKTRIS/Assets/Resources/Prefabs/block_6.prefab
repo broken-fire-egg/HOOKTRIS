@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834357079251920}
   - component: {fileID: 61068074353599484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor (1)
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4221094012778052}
   - component: {fileID: 61455842351340368}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4036897983524578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4408889463568576}
   - component: {fileID: 61101965396864736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4643851205634794}
   - component: {fileID: 61466235379145408}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -102,9 +102,9 @@ GameObject:
   - component: {fileID: 50851347879597780}
   - component: {fileID: 114088906585754834}
   - component: {fileID: 60262419028616706}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block_6
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4112364324791926}
   - component: {fileID: 61718603443425680}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4199993775529034}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 1639233993982550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4036897983524578}
   - {fileID: 4199993775529034}

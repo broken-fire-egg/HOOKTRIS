@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4179002611729386}
   - component: {fileID: 61414840268661720}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4762852409739826}
   - component: {fileID: 61367284921504872}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4857731666752546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4050584896323898}
   - component: {fileID: 61859313018790228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (3)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4615889117096308}
   - component: {fileID: 61504583649860918}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4237164852152880}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4815674495273930}
   - component: {fileID: 61148128541861132}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4973017112924390}
   - component: {fileID: 61283914480845108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor (1)
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -149,9 +149,9 @@ GameObject:
   - component: {fileID: 50473401944069252}
   - component: {fileID: 114591762069159460}
   - component: {fileID: 60760586270821208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block_4
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -205,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 1978993587346164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4857731666752546}
   - {fileID: 4237164852152880}

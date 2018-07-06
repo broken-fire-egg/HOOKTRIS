@@ -20,7 +20,7 @@ public class Hook : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name != player.name && collision.gameObject.name != gameObject.name)
+        if (collision.gameObject.name != player.name && collision.gameObject.name != gameObject.name && !collision.CompareTag("TrajHook"))
         {
             rigid.bodyType = RigidbodyType2D.Kinematic;
             rigid.velocity = Vector2.zero;
