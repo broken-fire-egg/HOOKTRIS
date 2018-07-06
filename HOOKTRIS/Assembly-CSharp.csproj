@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BrokeN\Scripts\UIController.cs" />
+    <Compile Include="Assets\BrokenFireEgg\Scripts\HeroMove.cs" />
+    <Compile Include="Assets\BrokenFireEgg\Scripts\VirtualJoystick.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/GitHub/HOOKTRIS/HOOKTRIS/HOOKTRIS/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
