@@ -8,7 +8,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource[] BGMs;
     public AudioSource[] SFXs;
 
-    public bool BGM, SFX;
+    public int BGM, SFX;
 
     private void Start()
     {
@@ -16,6 +16,25 @@ public class SoundManager : MonoBehaviour
             instance = this;
         else
             Destroy(gameObject);
+
+        BGM = PlayerPrefs.GetInt("BGM", 1);
+        SFX = PlayerPrefs.GetInt("SFX", 1);
+
+        for (int i = 0; i < BGMs.Length; i++)
+        {
+            if (BGM == 1)
+                BGMs[i].mute = false;
+            else
+                BGMs[i].mute = true;
+        }
+
+        for (int i = 0; i < SFXs.Length; i++)
+        {
+            if (SFX == 1)
+                SFXs[i].mute = false;
+            else
+                SFXs[i].mute = true;
+        }
     }
 
     public void PlayBGM(int BGM_num)
@@ -34,5 +53,42 @@ public class SoundManager : MonoBehaviour
         int a = Mathf.Clamp(SFX_num, 0, SFXs.Length);
 
         SFXs[a].Play();
+    }
+
+    public void SFXOn()
+    {
+        for (int i = 0; i < SFXs.Length; i++)
+            SFXs[i].mute = false;
+    }
+    public void SFXOff()
+    {
+        if (SFXs[0].isPlaying)
+        {
+            for (int i = 0; i < SFXs.Length; i++)
+                SFXs[i].Pause();
+        }
+        else
+        {
+            for (int i = 0; i < SFXs.Length; i++)
+                SFXs[i].Play();
+        }
+    }
+    public void BGMOn()
+    {
+        for (int i = 0; i < BGMs.Length; i++)
+            BGMs[i].mute = false;
+    }
+    public void BGMOff()
+    {
+        if (BGMs[0].isPlaying)
+        {
+            for (int i = 0; i < BGMs.Length; i++)
+                BGMs[i].Pause();
+        }
+        else
+        {
+            for (int i = 0; i < BGMs.Length; i++)
+                BGMs[i].Play();
+        }
     }
 }

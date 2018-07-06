@@ -1,62 +1,51 @@
-Base path: C:/Program Files/Unity/Editor/Data
+Base path: D:/Unity/Editor/Data
 Cmd: initializeCompiler
 Cmd: preprocess
-  insize=1534 outsize=1050 ok=1
+  insize=1614 outsize=1104 ok=1
 Cmd: preprocess
-  insize=3625 outsize=2392 ok=1
+  insize=3745 outsize=2476 ok=1
 Cmd: preprocess
-  insize=1367 outsize=591 ok=1
+  insize=1425 outsize=616 ok=1
 Cmd: preprocess
-  insize=1540 outsize=572 ok=1
+  insize=1596 outsize=594 ok=1
 Cmd: preprocess
-  insize=11551 outsize=1853 ok=1
+  insize=12073 outsize=1961 ok=1
 Cmd: preprocess
-  insize=2156 outsize=843 ok=1
+  insize=2254 outsize=883 ok=1
 Cmd: preprocess
-  insize=2317 outsize=890 ok=1
+  insize=2417 outsize=933 ok=1
 Cmd: preprocess
-  insize=11125 outsize=1843 ok=1
+  insize=11647 outsize=1949 ok=1
 Cmd: preprocess
-  insize=2464 outsize=1680 ok=1
+  insize=2554 outsize=1744 ok=1
 Cmd: preprocess
-  insize=1390 outsize=454 ok=1
+  insize=1456 outsize=476 ok=1
 Cmd: preprocess
-  insize=4771 outsize=2656 ok=1
+  insize=4923 outsize=2750 ok=1
 Cmd: compileSnippet
   error: 2 plat 4 at Assets/spine-unity/Assets/spine-unity/Modules/Shaders/Sprite/CGIncludes/SpritePixelLighting.cginc(60): syntax error: unexpected token ';'\nCompiling Vertex program with POINT
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR
-  api=4 type=0 insize=1360 outsize=0 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=0
+  api=4 type=0 insize=1383 outsize=0 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=0
 Cmd: preprocess
-  insize=2247 outsize=935 ok=1
+  insize=2347 outsize=976 ok=1
 Cmd: preprocess
-  insize=212 outsize=209 ok=1
+  insize=224 outsize=221 ok=1
 Cmd: preprocess
-  insize=9581 outsize=1546 ok=1
+  insize=10027 outsize=1639 ok=1
 Cmd: preprocess
-  insize=4987 outsize=1139 ok=1
+  insize=5175 outsize=1195 ok=1
 Cmd: preprocess
-  insize=2337 outsize=848 ok=1
+  insize=2436 outsize=889 ok=1
 Cmd: preprocess
-  insize=2539 outsize=949 ok=1
+  insize=2645 outsize=990 ok=1
 Cmd: preprocess
-  insize=1396 outsize=530 ok=1
+  insize=1451 outsize=551 ok=1
 Cmd: preprocess
-  insize=2836 outsize=1237 ok=1
+  insize=2954 outsize=1293 ok=1
 Cmd: preprocess
-  insize=11446 outsize=2036 ok=1
+  insize=11964 outsize=2148 ok=1
 Cmd: preprocess
-  insize=2615 outsize=1198 ok=1
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+  insize=2729 outsize=1252 ok=1
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
