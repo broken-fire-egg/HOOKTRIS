@@ -47,16 +47,16 @@ public class TempP : MonoBehaviour
 
     private void ThrowHook()
     {
-        if (Input.GetMouseButtonDown(0) && hook == null)
+        if (Input.GetMouseButtonUp(0) && hook == null)
         {
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
             hook = GameObject.Instantiate(hookprefab).Init(this, (mousepos - (Vector2)transform.position).normalized, power);
-            hook.transform.position = transform.position;
+            hook.transform.position = transform.position + new Vector3(0,1f);
         }
-        else if (Input.GetMouseButtonDown(0) && hook != null)
+        else if (Input.GetMouseButtonUp(0) && hook != null)
         {
             Destroy(hook.gameObject);
             hook = null;

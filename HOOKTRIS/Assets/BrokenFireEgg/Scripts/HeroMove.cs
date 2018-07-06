@@ -49,7 +49,7 @@ public class HeroMove : MonoBehaviour {
 
 
 
-        RB2D.velocity = dir * speed;
+       // RB2D.velocity = dir * speed;
         //if()
     }
 }
