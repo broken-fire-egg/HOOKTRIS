@@ -580,7 +580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 15
   power: 35
-  grabpower: 15
+  grabpower: 25
   hookprefab: {fileID: 114980697323979880, guid: 509a6dc7937f9b444a524db55f565a40,
     type: 2}
 --- !u!61 &1728565124
