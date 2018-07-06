@@ -59,6 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BrokeN\Scripts\UIController.cs" />
+    <Compile Include="Assets\BrokenFireEgg\Scripts\HeroMove.cs" />
+    <Compile Include="Assets\BrokenFireEgg\Scripts\VirtualJoystick.cs" />
     <Compile Include="Assets\TestProejct\Gentle\Scripts\Hook.cs" />
     <Compile Include="Assets\TestProejct\Gentle\Scripts\TempP.cs" />
     <Reference Include="UnityEditor.StandardEvents">
