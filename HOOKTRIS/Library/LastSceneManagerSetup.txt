@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BrokeN/Scenes/TestMainScene.unity
+- path: Assets/BrokeN/Scenes/TestGameScene.unity
   isLoaded: 1
   isActive: 1

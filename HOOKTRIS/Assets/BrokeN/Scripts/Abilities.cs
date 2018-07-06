@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Jump : MonoBehaviour
+public class Abilities : MonoBehaviour
 {
     private Rigidbody2D rigid;
     private bool isClimbing, JumpAvailable, ClimbAvailable;
 
-    public float jumpForce;
+    public float jumpForce, throwForce;
+    public int BlockLimit;
+    public GameObject[] blocks;
 
     private void Start()
     {
@@ -20,6 +22,7 @@ public class Jump : MonoBehaviour
     private void Update()
     {
         jump();
+        ThrowBlock();
     }
 
     private void jump()
@@ -38,6 +41,19 @@ public class Jump : MonoBehaviour
                 JumpAvailable = false;
             }
 
+        }
+    }
+    private void ThrowBlock()
+    {
+        if (Input.GetMouseButtonUp(1) && BlockLimit > 0)
+        {
+            Vector2 mousepos = Vector2.zero;
+            mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            BlockLimit--;
+
+            Instantiate(blocks[Random.Range(0, blocks.Length)], transform.position + new Vector3(0f, 0.5f), Quaternion.identity).GetComponent<Block>().Init((mousepos - (Vector2)transform.position).normalized, throwForce);
+            
         }
     }
 
