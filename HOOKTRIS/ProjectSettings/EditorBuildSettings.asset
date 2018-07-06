@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/BrokeN/Scenes/TestMainScene.unity
+    guid: d626460ca6fc57d41967a3bd2f13aa00
+  - enabled: 1
+    path: Assets/BrokeN/Scenes/TestGameScene.unity
+    guid: 356701691caef704d88ee3c4e841947a
   m_configObjects: {}
