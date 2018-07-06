@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TempP : MonoBehaviour
 {
+
     public float speed;
     public float power;
     public float grabpower;
-
+    public SpineManager SM;
+    public float gravity;
     private Rigidbody2D rigid;
     
     [SerializeField]
@@ -44,22 +46,43 @@ public class TempP : MonoBehaviour
 
         rigid.velocity = move;
     }
+    public void Inv_ThrowHook()
+    {
+        if (hook != null)
+            return;
+       // rigid.gravityScale = 0f;
+       Vector2 mousepos = Vector2.zero;
 
+        mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        hook = GameObject.Instantiate(hookprefab).Init(this, (mousepos - (Vector2)transform.position).normalized, Vector2.Distance(mousepos, transform.position), power);
+        hook.transform.position = transform.position + new Vector3(0, 1f);
+    }
     private void ThrowHook()
     {
-        if (Input.GetMouseButtonUp(0) && hook == null)
+        if(Input.GetMouseButtonDown(0) && hook == null)
         {
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (mousepos.x < transform.position.x)
+                transform.localRotation = new Quaternion(0,180f,0,1f);
+            else
+                transform.localRotation = new Quaternion();
 
-            hook = GameObject.Instantiate(hookprefab).Init(this, (mousepos - (Vector2)transform.position).normalized, power);
-            hook.transform.position = transform.position + new Vector3(0,1f);
+            SM.ChangeAnimation("atk_0", 0, false);
+
+        }
+        if (Input.GetMouseButtonUp(0) && hook == null)
+        {
+            Invoke("Inv_ThrowHook", 0.2f);
+            SM.ChangeAnimation("atk_1", 0, false);
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
         {
             Destroy(hook.gameObject);
             hook = null;
+          //  rigid.gravityScale = gravity;
         }
     }
 

@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\BrokeN\Scripts\Jump.cs" />
     <Compile Include="Assets\BrokeN\Scripts\UIController.cs" />
     <Compile Include="Assets\BrokenFireEgg\Scripts\CameraMove.cs" />
     <Compile Include="Assets\BrokenFireEgg\Scripts\HeroMove.cs" />
