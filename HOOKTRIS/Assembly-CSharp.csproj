@@ -61,6 +61,7 @@
   <ItemGroup>
     <Compile Include="Assets\BrokeN\Scripts\Abilities.cs" />
     <Compile Include="Assets\BrokeN\Scripts\Block.cs" />
+    <Compile Include="Assets\BrokeN\Scripts\CameraFollower.cs" />
     <Compile Include="Assets\BrokeN\Scripts\SoundManager.cs" />
     <Compile Include="Assets\BrokeN\Scripts\TrajHook.cs" />
     <Compile Include="Assets\BrokeN\Scripts\UIController.cs" />
