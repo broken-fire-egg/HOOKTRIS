@@ -9,6 +9,7 @@ TagManager:
   - block
   - player
   - TrajHook
+  - UI
   layers:
   - Default
   - TransparentFX

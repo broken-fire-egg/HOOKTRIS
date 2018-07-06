@@ -8,6 +8,7 @@ public class Abilities : MonoBehaviour
     private bool JumpAvailable;
 
     public float jumpForce, throwForce;
+    public VirtualJoystick VJ;
     public int BlockLimit;
     public GameObject[] blocks;
 
@@ -25,7 +26,7 @@ public class Abilities : MonoBehaviour
 
     private void jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (VJ.Vertical() > 0.8)
         {
             if (JumpAvailable)
             {
@@ -44,7 +45,7 @@ public class Abilities : MonoBehaviour
 
             BlockLimit--;
 
-            Instantiate(blocks[Random.Range(0, blocks.Length)], transform.position + new Vector3(0f, 0.5f), Quaternion.identity).GetComponent<Block>().Init((mousepos - (Vector2)transform.position).normalized, throwForce);
+            Instantiate(blocks[Random.Range(0, blocks.Length)], transform.position + new Vector3(0f, 0.7f), Quaternion.identity).GetComponent<Block>().Init((mousepos - (Vector2)transform.position).normalized, throwForce);
             
         }
     }

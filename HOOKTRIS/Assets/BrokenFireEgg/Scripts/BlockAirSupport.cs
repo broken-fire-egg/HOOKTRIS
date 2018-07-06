@@ -42,7 +42,7 @@ public class BlockAirSupport : MonoBehaviour {
         if(currentBlock !=null)
             Destroy(currentBlock);
         Debug.Log("asd");
-        currentBlock = Instantiate(blocks[Random.Range(0, blocks.Length)], Ora.transform.position + new Vector3(0,7f), Quaternion.identity);
+        currentBlock = Instantiate(blocks[Random.Range(0, blocks.Length)], Ora.transform.position + new Vector3(0,5f), Quaternion.identity);
     }
 
     public void HoldBlock()
@@ -51,6 +51,11 @@ public class BlockAirSupport : MonoBehaviour {
         RBC.gravityScale = 0f;
         RBC.velocity = new Vector2();
         RBC.bodyType = RigidbodyType2D.Static;
+        Collider2D []C2=  RBC.GetComponentsInChildren<Collider2D>();
+        for (int i = 0; i < C2.Length; i++)
+        {
+            C2[i].isTrigger = false;
+        }
         isHook = true;
         Ora.GetComponent<OraControl>().blockfalling = false;
         Ora.SetActive(false);

@@ -88,15 +88,15 @@ public class TempP : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && hook == null)
         {
           
-
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            V2 = mousepos;
-            //Debug.Log(V2);
-            if (V2.x < -6.1f && V2.y < -2.2f)
+
+            V2 = Input.mousePosition;
+            Debug.Log(V2);
+            if (V2.x < 300 && V2.y < 330f)
                 return;
-            if (V2.x > 6 && V2.y < -2)
+            if (V2.x > 1600 && V2.y < 330f)
                 return;
             InvokeRepeating("Parabola", 0f, 0.2f);
              
@@ -112,9 +112,9 @@ public class TempP : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && hook == null)
         {
-            if (V2.x < -6 && V2.y < -2)
+            if (V2.x < 300 && V2.y < 330f)
                 return;
-            if (V2.x > 6 && V2.y < -2)
+            if (V2.x > 1600 && V2.y < 330f)
                 return;
             Invoke("Inv_ThrowHook", 0.2f);
             CancelInvoke("Parabola");
@@ -122,9 +122,9 @@ public class TempP : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
         {
-            if (V2.x < -6 && V2.y < -2)
+            if (V2.x < 300 && V2.y < 330f)
                 return;
-            if (V2.x > 6 && V2.y < -2)
+            if (V2.x > 1600 && V2.y < 330f)
                 return;
             SM.ChangeAnimation("idle_0", 0, true);
             Destroy(hook.gameObject);
