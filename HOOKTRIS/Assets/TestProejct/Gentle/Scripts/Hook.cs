@@ -59,6 +59,13 @@ public class Hook : MonoBehaviour {
 
             player.Rigid.velocity += direc;
         }
+        else if(Vector2.Distance(transform.position, player.transform.position) < 0.5f)
+        {
+            Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower/3;
+
+            player.Rigid.velocity += direc;
+        }
+
     }
 
     private void LineConnect()

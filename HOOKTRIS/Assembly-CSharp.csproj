@@ -59,9 +59,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="Assets\BrokeN\Scripts\Jump.cs" />
+=======
     <Compile Include="Assets\BrokeN\Scripts\Abilities.cs" />
     <Compile Include="Assets\BrokeN\Scripts\Block.cs" />
     <Compile Include="Assets\BrokeN\Scripts\SoundManager.cs" />
+>>>>>>> c5ef2ae140b356a80447abfe29f018d76682b517
     <Compile Include="Assets\BrokeN\Scripts\UIController.cs" />
     <Compile Include="Assets\BrokenFireEgg\Scripts\CameraMove.cs" />
     <Compile Include="Assets\BrokenFireEgg\Scripts\HeroMove.cs" />

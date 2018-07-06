@@ -17,7 +17,7 @@ public class HeroMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Move();
-
+        Debug.Log(RB2D.velocity);
     }
     public void Move()
     {
