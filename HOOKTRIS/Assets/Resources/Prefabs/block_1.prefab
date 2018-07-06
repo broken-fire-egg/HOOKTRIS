@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220690821651470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,7 +35,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4351359855972320}
   - component: {fileID: 61229195594064866}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (1)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4118403371084072}
   - component: {fileID: 61601972709560528}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4255500038538740}
   - component: {fileID: 61897623009563358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wall (2)
   m_TagString: wall
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4090560260793548}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,9 +101,9 @@ GameObject:
   - component: {fileID: 50274869014041522}
   - component: {fileID: 114967247447453480}
   - component: {fileID: 60823621977252828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: block_1
-  m_TagString: Untagged
+  m_TagString: block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -117,7 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4991648337042994}
   - component: {fileID: 61033085045205952}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: floor
   m_TagString: floor
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ Transform:
   m_GameObject: {fileID: 1847129996989610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4220690821651470}
   - {fileID: 4090560260793548}

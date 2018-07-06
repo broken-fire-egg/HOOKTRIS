@@ -12,7 +12,7 @@ public class TempP : MonoBehaviour
     public float gravity;
 
     public bool shaking;
-
+    public GameObject trajs;
     private Rigidbody2D rigid;
     
     [SerializeField]
@@ -87,7 +87,7 @@ public class TempP : MonoBehaviour
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            InvokeRepeating("Parabola", 0f, 0.5f);
+            InvokeRepeating("Parabola", 0f, 0.2f);
             
 
             if (mousepos.x < transform.position.x)
