@@ -22,7 +22,7 @@ public class HeroMove : MonoBehaviour {
     public void Move()
     {
         Vector2 dir = new Vector2();
-        dir.x = VJ.Horizontal();
+        //dir.x = VJ.Horizontal();
         if (dir.x < 0f)
             transform.localRotation = new Quaternion(0f, 180f, 0f, 1f);
         else if (dir.x > 0f)

@@ -10,10 +10,15 @@ public class TempP : MonoBehaviour
     public float grabpower;
     public SpineManager SM;
     public float gravity;
+
+    public bool shaking;
+
     private Rigidbody2D rigid;
     
     [SerializeField]
     private Hook hookprefab;
+    [SerializeField]
+    private TrajHook trajhook;
 
     private Hook hook;
 
@@ -25,19 +30,29 @@ public class TempP : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 vel = rigid.velocity;
-        rigid.velocity = Vector2.zero;
-        Movement();
+        if (shaking == false)
+        {
+            Vector2 vel = rigid.velocity;
+            rigid.velocity = Vector2.zero;
+            Movement();
 
-        ThrowHook();
-        if (hook != null)
-            hook.NextUpdate();
+            ThrowHook();
+            if (hook != null)
+                hook.NextUpdate();
 
-        if (rigid.velocity.x == 0)
-            rigid.velocity = new Vector2(vel.x, rigid.velocity.y);
-        if (rigid.velocity.y == 0)
-            rigid.velocity = new Vector2(rigid.velocity.x, vel.y);
+            if (rigid.velocity.x == 0)
+                rigid.velocity = new Vector2(vel.x, rigid.velocity.y);
+            if (rigid.velocity.y == 0)
+                rigid.velocity = new Vector2(rigid.velocity.x, vel.y);
+        }
+        else if (shaking == true)
+        {
+            Movement();
 
+            ThrowHook();
+            if (hook != null)
+                hook.NextUpdate();
+        }
     }
     public void Wallwilling()
     {
@@ -45,9 +60,12 @@ public class TempP : MonoBehaviour
     }
     private void Movement()
     {
-        Vector2 move = new Vector2((Input.GetAxis("Horizontal") * speed), rigid.velocity.y);
+        Vector2 move = new Vector2((Input.GetAxis("Horizontal") * speed), 0) * 0.1f;
+        
+        if ((0 < move.x && rigid.velocity.x <= (speed * 0.5f)) || (move.x < 0 && (speed * 0.5f) * -1f <= rigid.velocity.x))
+            rigid.velocity += move;
 
-        rigid.velocity = move;
+        Debug.DrawRay(transform.position, rigid.velocity, Color.red, 0.1f);
     }
     public void Inv_ThrowHook()
     {
@@ -68,6 +86,10 @@ public class TempP : MonoBehaviour
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            InvokeRepeating("Parabola", 0f, 0.5f);
+            
+
             if (mousepos.x < transform.position.x)
                 transform.localRotation = new Quaternion(0,180f,0,1f);
             else
@@ -79,6 +101,7 @@ public class TempP : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && hook == null)
         {
             Invoke("Inv_ThrowHook", 0.2f);
+            CancelInvoke("Parabola");
             SM.ChangeAnimation("atk_1", 0, false);
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
@@ -88,6 +111,16 @@ public class TempP : MonoBehaviour
             hook = null;
           //  rigid.gravityScale = gravity;
         }
+    }
+    private void Parabola()
+    {
+        Vector2 mousepos = Vector2.zero;
+
+        mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        TrajHook a = Instantiate(trajhook).Init(this, (mousepos - (Vector2)transform.position).normalized, Vector2.Distance(mousepos, transform.position), power);
+        a.transform.position = transform.position + new Vector3(0, 1f);
+        Destroy(a, 5f);
     }
 
     #region Properties
