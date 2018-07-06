@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/BrokenFireEgg/Character.unity
+- path: Assets/TestProejct/Gentle/Hook.unity
   isLoaded: 1
   isActive: 1
