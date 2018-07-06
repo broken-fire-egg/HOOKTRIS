@@ -52,17 +52,28 @@ public class Hook : MonoBehaviour {
 
     private void Grabbing()
     {
-        if (Vector2.Distance(transform.position, player.transform.position) > 1.5f)
+        if (player.shaking == false)
+        {
+            if (Vector2.Distance(transform.position, player.transform.position) > 1.5f)
+            {
+                Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower;
+
+                player.Rigid.velocity += direc;
+            }
+            else if (Vector2.Distance(transform.position, player.transform.position) < 0.5f)
+            {
+                Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower / 3;
+                player.Wallwilling();
+                player.Rigid.velocity += direc;
+            }
+        }
+        else if(player.shaking == true)
         {
             Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower;
 
-            player.Rigid.velocity += direc;
-        }
-        else if(Vector2.Distance(transform.position, player.transform.position) < 0.5f)
-        {
-            Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower/3;
-            player.Wallwilling();
-            player.Rigid.velocity += direc;
+            //direc.x += (transform.position - player.transform.position).x * player.grabpower * 0.5f;
+
+            player.Rigid.velocity += direc * 0.068f;
         }
 
     }
