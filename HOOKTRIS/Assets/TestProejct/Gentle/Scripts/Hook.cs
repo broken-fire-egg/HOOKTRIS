@@ -41,21 +41,24 @@ public class Hook : MonoBehaviour {
             Grabbing();
     }
 
-    public Hook Init(TempP player, Vector2 direction, float power)
+    public Hook Init(TempP player, Vector2 direction, float distance, float power)
     {
         this.player = player;
         this.direction = direction;
 
-        rigid.velocity = direction * power;
+        rigid.velocity = (direction * (1f - (1f / distance)) * power) + direction * power;
 
         return this;
     }
 
     private void Grabbing()
     {
-        Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower;
+        if (Vector2.Distance(transform.position, player.transform.position) > 1.5f)
+        {
+            Vector2 direc = (transform.position - player.transform.position).normalized * player.grabpower;
 
-        player.Rigid.velocity += direc;
+            player.Rigid.velocity += direc;
+        }
     }
 
     private void LineConnect()
