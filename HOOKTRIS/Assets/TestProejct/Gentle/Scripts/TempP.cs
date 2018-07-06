@@ -14,6 +14,8 @@ public class TempP : MonoBehaviour
     
     [SerializeField]
     private Hook hookprefab;
+    [SerializeField]
+    private TrajHook trajhook;
 
     private Hook hook;
 
@@ -68,6 +70,10 @@ public class TempP : MonoBehaviour
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+            InvokeRepeating("Parabola", 0f, 0.5f);
+            
+
             if (mousepos.x < transform.position.x)
                 transform.localRotation = new Quaternion(0,180f,0,1f);
             else
@@ -79,6 +85,7 @@ public class TempP : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && hook == null)
         {
             Invoke("Inv_ThrowHook", 0.2f);
+            CancelInvoke("Parabola");
             SM.ChangeAnimation("atk_1", 0, false);
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
@@ -88,6 +95,16 @@ public class TempP : MonoBehaviour
             hook = null;
           //  rigid.gravityScale = gravity;
         }
+    }
+    private void Parabola()
+    {
+        Vector2 mousepos = Vector2.zero;
+
+        mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        TrajHook a = Instantiate(trajhook).Init(this, (mousepos - (Vector2)transform.position).normalized, Vector2.Distance(mousepos, transform.position), power);
+        a.transform.position = transform.position + new Vector3(0, 1f);
+        Destroy(a, 5f);
     }
 
     #region Properties

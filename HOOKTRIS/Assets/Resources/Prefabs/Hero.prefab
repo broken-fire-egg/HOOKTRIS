@@ -184,6 +184,7 @@ MonoBehaviour:
   gravity: 7
   hookprefab: {fileID: 114980697323979880, guid: 509a6dc7937f9b444a524db55f565a40,
     type: 2}
+  trajhook: {fileID: 0}
 --- !u!114 &114639401747367278
 MonoBehaviour:
   m_ObjectHideFlags: 1
