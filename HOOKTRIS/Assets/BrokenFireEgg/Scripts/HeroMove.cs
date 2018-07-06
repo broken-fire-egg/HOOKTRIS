@@ -9,15 +9,21 @@ public class HeroMove : MonoBehaviour {
     public SpineManager SM;
     public VirtualJoystick VJ;
     int status = 0;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+    }
+
+
+    void Start () {
         RB2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
         Move();
-        Debug.Log(RB2D.velocity);
+        //Debug.Log(RB2D.velocity);
     }
     public void Move()
     {

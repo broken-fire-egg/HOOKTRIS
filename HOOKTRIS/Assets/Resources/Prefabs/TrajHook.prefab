@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114075661674534192}
   m_Layer: 0
   m_Name: TrajHook
-  m_TagString: Untagged
+  m_TagString: TrajHook
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_GameObject: {fileID: 1176047105194436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -79,7 +79,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 0.65}
+    oldSize: {x: 2.89, y: 2.89}
     newSize: {x: 0.78, y: 0.65}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 6eccbe20dcfb82046886a726b695d0c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3eb39d590baace46972dfe97767eb93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

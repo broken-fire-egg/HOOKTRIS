@@ -162,11 +162,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 92048862}
-  isHook: 0
+  isHook: 1
   hookspr: {fileID: 21300000, guid: 9ee51d30d3def324dbc17a6e0505a0c4, type: 3}
   airsupportspr: {fileID: 21300000, guid: c1eac93bc657a9d43b39081c85d5c324, type: 3}
   Player: {fileID: 965555645}
   Ora: {fileID: 352394632}
+  VJ: {fileID: 123070208}
   blocks:
   - {fileID: 1847129996989610, guid: e866bb1fcf3cfa841bd9265f47118471, type: 2}
   - {fileID: 1060354879777854, guid: 6f66744d6fc80af4fbe95cda40acb7df, type: 2}
@@ -353,7 +354,7 @@ GameObject:
   - component: {fileID: 123232784}
   m_Layer: 0
   m_Name: Wall (1)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -645,7 +646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4880961682858714, guid: 577983be1722469488984ebd4e7c4fa6, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1016434621385088, guid: 577983be1722469488984ebd4e7c4fa6, type: 2}
       propertyPath: m_IsActive
@@ -763,11 +764,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4072863465211656, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.503
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4072863465211656, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.111
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4072863465211656, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -791,34 +792,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4072863465211656, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114370654746719082, guid: bf456d47ebb298c41abd3c236246067f,
         type: 2}
       propertyPath: VJ
       value: 
       objectReference: {fileID: 123070210}
+    - target: {fileID: 114579414197056738, guid: bf456d47ebb298c41abd3c236246067f,
+        type: 2}
+      propertyPath: VJ
+      value: 
+      objectReference: {fileID: 123070210}
+    - target: {fileID: 114579414197056738, guid: bf456d47ebb298c41abd3c236246067f,
+        type: 2}
+      propertyPath: BAS
+      value: 
+      objectReference: {fileID: 92048860}
     - target: {fileID: 33474160119079884, guid: bf456d47ebb298c41abd3c236246067f,
         type: 2}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114579414197056738, guid: bf456d47ebb298c41abd3c236246067f,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105871916266744, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105871916266744, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1105871916266744, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
-      propertyPath: m_TagString
-      value: player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf456d47ebb298c41abd3c236246067f, type: 2}
@@ -835,7 +829,7 @@ GameObject:
   - component: {fileID: 1525766451}
   m_Layer: 0
   m_Name: Wall (2)
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -921,7 +915,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.766}
 --- !u!1 &1619659189
 GameObject:
@@ -935,7 +929,7 @@ GameObject:
   - component: {fileID: 1619659190}
   m_Layer: 0
   m_Name: Wall
-  m_TagString: Untagged
+  m_TagString: wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1021,7 +1015,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!1 &2099411887
 GameObject:

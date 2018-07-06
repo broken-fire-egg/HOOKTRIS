@@ -22,11 +22,14 @@ public class VirtualJoystick : MonoBehaviour, IDragHandler, IPointerDownHandler,
         if (RectTransformUtility.ScreenPointToLocalPointInRectangle(bgimg.rectTransform,
             ped.position, ped.pressEventCamera, out pos))
         {
+
+           
+
             pos.x = (pos.x / bgimg.rectTransform.sizeDelta.x );
             pos.y = (pos.y / bgimg.rectTransform.sizeDelta.y);
             inputVector = new Vector3(pos.x * 2, 0, pos.y * 2);
             inputVector = (inputVector.magnitude > 1.0f) ? inputVector.normalized : inputVector;
-            Debug.Log(inputVector);
+          //  Debug.Log(inputVector);
 
             joystickimg.rectTransform.anchoredPosition =
                 new Vector3(inputVector.x * (bgimg.rectTransform.sizeDelta.x / 3f)

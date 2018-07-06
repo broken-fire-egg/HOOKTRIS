@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TempP : MonoBehaviour
 {
-
+    public VirtualJoystick VJ;
     public float speed;
     public float power;
     public float grabpower;
@@ -13,6 +13,8 @@ public class TempP : MonoBehaviour
 
     public bool shaking;
     public GameObject trajs;
+    public BlockAirSupport BAS;
+    public Vector2 V2;
     private Rigidbody2D rigid;
     
     [SerializeField]
@@ -60,7 +62,7 @@ public class TempP : MonoBehaviour
     }
     private void Movement()
     {
-        Vector2 move = new Vector2((Input.GetAxis("Horizontal") * speed), 0) * 0.1f;
+        Vector2 move = new Vector2((VJ.Horizontal() * speed), 0) * 0.1f;
         
         if ((0 < move.x && rigid.velocity.x <= (speed * 0.5f)) || (move.x < 0 && (speed * 0.5f) * -1f <= rigid.velocity.x))
             rigid.velocity += move;
@@ -81,14 +83,24 @@ public class TempP : MonoBehaviour
     }
     private void ThrowHook()
     {
+        if (BAS.isHook != true)
+            return;
         if(Input.GetMouseButtonDown(0) && hook == null)
         {
+          
+
             Vector2 mousepos = Vector2.zero;
 
             mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            V2 = mousepos;
+            //Debug.Log(V2);
+            if (V2.x < -6.1f && V2.y < -2.2f)
+                return;
+            if (V2.x > 6 && V2.y < -2)
+                return;
             InvokeRepeating("Parabola", 0f, 0.2f);
-            
+             
+
 
             if (mousepos.x < transform.position.x)
                 transform.localRotation = new Quaternion(0,180f,0,1f);
@@ -100,12 +112,20 @@ public class TempP : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0) && hook == null)
         {
+            if (V2.x < -6 && V2.y < -2)
+                return;
+            if (V2.x > 6 && V2.y < -2)
+                return;
             Invoke("Inv_ThrowHook", 0.2f);
             CancelInvoke("Parabola");
             SM.ChangeAnimation("atk_1", 0, false);
         }
         else if (Input.GetMouseButtonUp(0) && hook != null)
         {
+            if (V2.x < -6 && V2.y < -2)
+                return;
+            if (V2.x > 6 && V2.y < -2)
+                return;
             SM.ChangeAnimation("idle_0", 0, true);
             Destroy(hook.gameObject);
             hook = null;

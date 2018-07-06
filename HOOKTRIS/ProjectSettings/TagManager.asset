@@ -8,6 +8,7 @@ TagManager:
   - floor
   - block
   - player
+  - TrajHook
   layers:
   - Default
   - TransparentFX
